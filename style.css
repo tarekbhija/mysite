@@ -656,3 +656,18 @@ footer p {
         gap: 4px;
     }
 }
+/* ========== FORM STATUS ========== */
+.form-status {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 8px;
+    min-height: 24px;
+}
+
+.form-status.success {
+    color: #2d6a4f;
+}
+
+.form-status.error {
+    color: #c1121f;
+}
