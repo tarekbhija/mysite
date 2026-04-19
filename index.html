@@ -175,13 +175,14 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" action="https://formspree.io/f/mvzdrlao" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <input type="text" name="company" placeholder="Company (optional)">
-                    <textarea name="message" placeholder="Tell me about your challenge..." rows="5" required></textarea>
-                    <button type="submit" class="btn-primary">Send Message</button>
-                </form>
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="company" placeholder="Company (optional)">
+                <textarea name="message" placeholder="Tell me about your challenge..." rows="5" required></textarea>
+                <button type="submit" class="btn-primary" id="submitBtn">Send Message</button>
+                <p class="form-status" id="formStatus"></p>
+            </form>
             </div>
         </div>
     </section>
