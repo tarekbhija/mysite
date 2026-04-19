@@ -671,3 +671,103 @@ footer p {
 .form-status.error {
     color: #c1121f;
 }
+/* ========== PHONE GROUP ========== */
+.phone-group {
+    display: flex;
+    gap: 8px;
+}
+
+.country-code {
+    width: 120px;
+    padding: 14px 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #1a1a2e;
+    background: #ffffff;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    -webkit-appearance: none;
+}
+
+.country-code:focus {
+    outline: none;
+    border-color: #2d6a4f;
+}
+
+.phone-group input {
+    flex: 1;
+}
+
+
+/* ========== WHATSAPP BADGE ========== */
+.whatsapp-badge {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 56px;
+    height: 56px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp-badge:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(37, 211, 102, 0.5);
+}
+
+
+/* ========== LANGUAGE SWITCHER ========== */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 8px;
+}
+
+.lang-switcher a {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #999;
+    transition: color 0.3s;
+}
+
+.lang-switcher a:hover {
+    color: #1a1a2e;
+}
+
+.lang-active {
+    color: #1a1a2e !important;
+}
+
+.lang-divider {
+    font-size: 0.8rem;
+    color: #ddd;
+}
+
+
+/* ========== MOBILE MENU - ADD LANGUAGE SWITCHER ========== */
+@media (max-width: 600px) {
+    .phone-group {
+        flex-direction: column;
+    }
+
+    .country-code {
+        width: 100%;
+    }
+
+    .whatsapp-badge {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+}
