@@ -499,21 +499,22 @@ a {
 .why-card.large {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   overflow: hidden;
-  padding: 0; /* remove so image bleeds to edges */
+  padding: 0;
 }
 
 .why-card-photo {
   width: 100%;
-  height: 200px;
+  aspect-ratio: 16 / 9;   /* or 4/3 for portrait */
   object-fit: cover;
   object-position: center top;
+  display: block;
   flex-shrink: 0;
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0; /* match card top corners */
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 .why-card.large .why-card-text {
+  flex: 1;
   padding: clamp(var(--space-5), 3vw, var(--space-8));
   background:
     linear-gradient(145deg, color-mix(in oklab, var(--color-bronze-soft) 52%, transparent), transparent),
