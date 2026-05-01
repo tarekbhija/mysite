@@ -503,15 +503,6 @@ a {
   padding: 0;
 }
 
-.why-card-photo {
-  width: 256px;
-  height: 255px;
-  display: block;
-  align-self: center;   /* center it horizontally in the card */
-  margin-top: clamp(var(--space-5), 3vw, var(--space-8));
-  border-radius: var(--radius-md);
-  flex-shrink: 0;
-}
 
 .why-card.large .why-card-text {
   flex: 1;
@@ -539,12 +530,11 @@ a {
   width: 256px;
   height: 255px;
   display: block;
-  align-self: center;
+  align-self: center;   /* center it horizontally in the card */
   margin-top: clamp(var(--space-5), 3vw, var(--space-8));
   border-radius: var(--radius-md);
   flex-shrink: 0;
 }
-
 .why-card.large .why-card-text {
   flex: 1;
   padding: clamp(var(--space-5), 3vw, var(--space-8));
