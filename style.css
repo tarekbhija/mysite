@@ -520,6 +520,52 @@ a {
     linear-gradient(145deg, color-mix(in oklab, var(--color-bronze-soft) 52%, transparent), transparent),
     var(--color-surface);
 }
+.why-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-5);
+  align-items: start; /* so both columns don't stretch to equal height */
+}
+
+.why-card.large {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+  height: 100%; /* fill column height */
+}
+
+.why-card-photo {
+  width: 256px;
+  height: 255px;
+  display: block;
+  align-self: center;
+  margin-top: clamp(var(--space-5), 3vw, var(--space-8));
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.why-card.large .why-card-text {
+  flex: 1;
+  padding: clamp(var(--space-5), 3vw, var(--space-8));
+  background:
+    linear-gradient(145deg, color-mix(in oklab, var(--color-bronze-soft) 52%, transparent), transparent),
+    var(--color-surface);
+}
+
+.why-stack {
+  display: grid;
+  gap: var(--space-5);
+  align-content: start;
+}
+
+/* Responsive: stack to single column on mobile */
+@media (max-width: 980px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .offer-detail {
   display: grid;
   gap: var(--space-3);
@@ -612,11 +658,6 @@ a {
   background:
     linear-gradient(145deg, color-mix(in oklab, var(--color-bronze-soft) 52%, transparent), transparent),
     var(--color-surface);
-}
-
-.why-stack {
-  display: grid;
-  gap: var(--space-5);
 }
 
 .cta-panel {
