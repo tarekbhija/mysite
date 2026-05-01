@@ -526,14 +526,22 @@ a {
   height: 100%; /* fill column height */
 }
 
+.why-card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(var(--space-6), 4vw, var(--space-10));
+  background: var(--color-surface-2);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
 .why-card-photo {
-  width: 256px;
-  height: 255px;
+  width: 80%;          /* fill 80% of the div width */
+  aspect-ratio: 1 / 1; /* keep it square (matches 256×255 ratio) */
+  object-fit: cover;
+  object-position: center top;
   display: block;
-  align-self: center;   /* center it horizontally in the card */
-  margin-top: clamp(var(--space-5), 3vw, var(--space-8));
   border-radius: var(--radius-md);
-  flex-shrink: 0;
 }
 .why-card.large .why-card-text {
   flex: 1;
@@ -547,6 +555,33 @@ a {
   display: grid;
   gap: var(--space-5);
   align-content: start;
+}
+
+.logo-bar {
+  border-bottom: 1px solid var(--color-divider);
+  background: color-mix(in oklab, var(--color-surface) 70%, transparent);
+}
+
+.logo-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  padding-block: var(--space-6);
+}
+
+.logo-item {
+  height: 28px;
+  width: auto;
+  opacity: 0.45;
+  filter: grayscale(100%);
+  transition: opacity var(--transition-interactive), filter var(--transition-interactive);
+}
+
+.logo-item:hover {
+  opacity: 0.85;
+  filter: grayscale(0%);
 }
 
 /* Responsive: stack to single column on mobile */
