@@ -504,13 +504,13 @@ a {
 }
 
 .why-card-photo {
-  width: 100%;
-  aspect-ratio: 16 / 9;   /* or 4/3 for portrait */
-  object-fit: cover;
-  object-position: center top;
+  width: 256px;
+  height: 255px;
   display: block;
+  align-self: center;   /* center it horizontally in the card */
+  margin-top: clamp(var(--space-5), 3vw, var(--space-8));
+  border-radius: var(--radius-md);
   flex-shrink: 0;
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 .why-card.large .why-card-text {
